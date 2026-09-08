@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the archived repository release and the associated paper when they become available."
+title: "Public Manufacturing Visual Defect Inspection Evidence Graph and Reproducibility Toolkit"
+type: dataset
+authors:
+  - name: "Repository contributors"
+version: 0.1.0
+date-released: 2026-08-27
+license: CC-BY-4.0
+keywords:
+  - industrial visual inspection
+  - manufacturing datasets
+  - defect detection
+  - anomaly detection
+  - synthetic data
+  - evidence graph
+

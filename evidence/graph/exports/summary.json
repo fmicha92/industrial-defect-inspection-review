@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "ambiguous_edges": 0,
+    "datasets": 157,
+    "duplicate_titles": 3,
+    "notes": 896,
+    "papers": 226,
+    "public_datasets": 85,
+    "public_manufacturing_dataset_candidates": 76,
+    "resolved_edges": 8926,
+    "synthesis_impact_candidates": 142,
+    "unique_wikilink_edges": 8926,
+    "unresolved_edges": 0
+  },
+  "interpretation": {
+    "public_dataset": "Documented public access does not imply permission to redistribute dataset files.",
+    "synthesis_impact_candidates": "Automated pre-screen only; manual eligibility confirmation required."
+  },
+  "repository_schema_version": "1.0.0",
+  "snapshot_date": "2026-08-27",
+  "vault_sha256": "43fac83e0c890dd448ceaa90e0183daf92854ec32246043146f5d59b07e1ebaa"
+}

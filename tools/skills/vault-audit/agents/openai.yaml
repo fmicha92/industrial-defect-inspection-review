@@ -1,0 +1,7 @@
+interface:
+  display_name: "Vault Audit"
+  short_description: "Audit vault structure and link health"
+  default_prompt: "Use $vault-audit to check the evidence graph and refresh its statistics."
+policy:
+  allow_implicit_invocation: true
+

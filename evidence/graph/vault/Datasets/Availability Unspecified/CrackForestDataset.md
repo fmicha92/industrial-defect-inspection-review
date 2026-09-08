@@ -1,0 +1,29 @@
+---
+title: "CrackForestDataset"
+aliases:
+  - "CFD"
+related_domain: "[[Multi-industry anomaly detection]]"
+url: "not reported"
+data_sources: "not reported"
+introduced_by: "not reported"
+---
+# CrackForestDataset
+
+## Definition
+
+CrackForestDataset is reported as an additional evaluation dataset in Scarcity-GAN experiments. Availability, licensing, and complete collection details are not reported in the processed source note.
+
+## Used In These Papers
+
+- [[2024 - Scarcity-GAN Scarce Data Augmentation for Defect Detection via Generative Adversarial Nets]] reports CrackForestDataset as an additional dataset.
+
+## Source Anchors
+
+- Hosting source: not reported.
+- Introducing paper: not reported.
+
+## Related Concepts
+
+- [[Multi-industry anomaly detection]]
+- [[Surface defect detection]]
+- [[Industrial visual inspection]]

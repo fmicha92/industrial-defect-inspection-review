@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Audit"
+  short_description: "Audit paper notes against processed sources"
+  default_prompt: "Use $paper-audit to check the next paper note for extraction and graph completeness."
+policy:
+  allow_implicit_invocation: true
+

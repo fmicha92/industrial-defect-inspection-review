@@ -1,0 +1,93 @@
+{
+  "collapse-filter": false,
+  "search": "negative performance effects",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Papers",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "path:Datasets",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "path:Methods",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "path:Tasks",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "path:Metrics",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "path:Domains",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "path:Concepts",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "path:\"Learning Paradigms\"",
+      "color": {
+        "a": 1,
+        "rgb": 9228669
+      }
+    },
+    {
+      "query": "path:Benchmarks",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "path:\"Concepts/Emerging Concepts\" OR path:\"Methods/Emerging Methods\" OR path:\"Metrics/Emerging Metrics\" OR path:\"Domains/Emerging Domains\" OR path:\"Learning Paradigms/Emerging Learning Paradigms\"",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.947916666666667,
+  "repelStrength": 1.25,
+  "linkStrength": 1,
+  "linkDistance": 30,
+  "scale": 1.580246913580245,
+  "close": false
+}

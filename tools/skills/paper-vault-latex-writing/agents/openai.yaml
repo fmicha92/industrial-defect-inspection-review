@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Vault LaTeX Writing"
+  short_description: "Draft the manuscript from curated evidence"
+  default_prompt: "Use $paper-vault-latex-writing to plan the next manuscript section from confirmed vault evidence."
+policy:
+  allow_implicit_invocation: true
+

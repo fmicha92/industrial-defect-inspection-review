@@ -1,0 +1,117 @@
+\begingroup
+
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+
+\begin{longtable}{
+    @{}
+    >{\raggedright\arraybackslash}p{\dimexpr0.190\textwidth\relax}
+    >{\raggedright\arraybackslash}p{\dimexpr0.125\textwidth\relax}
+    >{\raggedright\arraybackslash}p{\dimexpr0.110\textwidth\relax}
+    >{\raggedright\arraybackslash}p{\dimexpr0.080\textwidth\relax}
+    >{\raggedright\arraybackslash}p{\dimexpr0.170\textwidth\relax}
+    >{\raggedright\arraybackslash}p{\dimexpr0.235\textwidth\relax}
+    @{}
+}
+    \caption{Public dataset registry for manufacturing visual defect inspection. Rows are grouped by manufacturing context. Dataset names are followed by citations to the data host and the introducing paper, or, where unavailable, a related paper. Tasks and annotation types use consistent terminology, while the Samples/classes column specifies whether counts refer to images, annotated samples, spatial instances, masks, defect-label classes, or product categories. Anomaly-detection counts distinguish training, validation, normal-test, and anomalous-test samples where possible. Resolution denotes native or released dimensions as width $\times$ height in pixels. Variable dimensions are reported as minimum--maximum width $\times$ minimum--maximum height, with parenthetical qualifiers identifying the source of variation. Available class counts are reported as slash-separated vectors for up to five classes and as minimum--maximum ranges for more than five classes. Vector labels and counts use the same left-to-right order. Dataset-specific acronyms are retained as published. Abbreviations: AD = anomaly detection, approx. = approximately, EL = electroluminescence, GSD = ground sample distance, IR = infrared, PV = photovoltaic, RGB = red--green--blue, ROI = region of interest, UAV = unmanned aerial vehicle, var. = variable.}
+    \label{tab:dataset_registry}\\
+
+    \hline
+    Dataset & Task(s) & Annotation & Modality & Resolution & Samples/classes \\
+    \hline
+    \endfirsthead
+    \caption[]{Public dataset registry for visual defect inspection datasets in manufacturing (continued).}\\
+    \hline
+    Dataset & Task(s) & Annotation & Modality & Resolution & Samples/classes \\
+    \hline
+    \endhead
+    \hline
+    \multicolumn{6}{r}{\textit{Continued on next page}}\\
+    \endfoot
+    \hline
+    \endlastfoot
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Semiconductor \& Electronics}}} \\
+    WM-811K~\citep{WM811KKaggle2026, Wu2015WM811K} & Classification & Image labels & Wafer maps & Var.: 6--300\,$\times$\,21--202 & 811{,}457 maps, 172{,}950 labeled, 9 single-label patterns, 149--147{,}431 per pattern \\
+    MixedWM38~\citep{MixedWM38GitHub2026, MixedWM38Repo2026} & Classification & Image labels & Wafer maps & 52\,$\times$\,52 & 38{,}015 maps, 38 single-label combination classes, 149--2{,}000 per class \\
+    DeepPCB~\citep{DeepPCBGitHub2026, Tang2019DeepPCB} & Object detection & Bounding boxes & Grayscale & 640\,$\times$\,640 & 1{,}500 aligned pairs (3{,}000 files), 1{,}500 annotated defective images, 10{,}013 boxes, 6 multi-label defect types \\
+    HRIPCB~\citep{HRIPCBHost2026, Huang2020HRIPCB} & Classification, object detection & Image labels + boxes & RGB & Source: 4{,}608\,$\times$\,3{,}456, release crops: 64\,$\times$\,64 & 1{,}386 annotated release crops, instances not reported, 6 single-label types, 230--232 per type \\
+    DsPCBSD+~\citep{DsPCBSDPlusFigshare2024, Lv2024DsPCBSDPlus} & Object detection & Bounding boxes & RGB & 226\,$\times$\,226 & 10{,}259 images, 20{,}276 boxes, 9 multi-label defect types \\
+    Heat Sink Surface Defects~\citep{KaggleHeatSink2026, Yang2022HeatSinkFCN} & Segmentation & Pixel masks & RGB & 320\,$\times$\,320 & 1{,}000 masked images, 2 multi-label foreground types, scratch/stain memberships: 700/972 \\
+    \hline
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Solar Cells / PV}}} \\
+    ELPV Solar Cell Dataset~\citep{ELPVRepo2026, ELPVBenchmark2018} & Classification & Probabilistic image labels & Grayscale EL & 300\,$\times$\,300 & 2{,}624 images, 4 probabilistic levels: 1{,}508/295/106/715 \\
+    PVEL-AD~\citep{PVELADRepo2026, Su2023PVELADPaper} & Classification, object detection & Image labels + boxes & Grayscale EL & 1{,}024\,$\times$\,1{,}024 & 36{,}543 images (normal/boxed/category-only: 11{,}351/21{,}044/4{,}148), 37{,}380 boxes, 8 boxed types \\
+    EL-2019 (SIGAN dataset)~\citep{EL2019GitHub2021, Su2021SIGAN} & Segmentation & Pixel masks & Grayscale EL & Source: 1{,}024\,$\times$\,1{,}024, release patches: 128\,$\times$\,128 & 540 masked patches, 3 single-label conditions: 280/130/130 \\
+    PV Panel Defect Dataset~\citep{KagglePVPanel2026, Lenarczyk2025PVPanelClassifiers} & Classification & Image labels & RGB & Var.: 149--6{,}240\,$\times$\,110--5{,}376 & 1{,}574 images, 6 single-label conditions, 225--298 per class \\
+    Dataset of Solar Cells Defect Segm.~\citep{KaggleSolarCellsSegm2026, Chen2025SolarCellsLMFF} & Segmentation & Pixel masks & Grayscale EL & SolarCells: 448\,$\times$\,448, other subsets: var. (verified 417--1{,}024\,$\times$\,426--1{,}024) & Masked images by subset: 190/36/1{,}200, binary foreground \\
+    BenchmarkELimages~\citep{BenchmarkELimagesGitHub2023, Pratt2023BenchmarkEL} & Segmentation & Multi-label pixel masks & Grayscale EL & 512\,$\times$\,512 & 582 masked images (release 20211104), 24 multi-label mask classes \\
+    PV-Multi-Defect~\citep{PVMultiDefectGitHub2023, Li2023PVMultiDefect} & Object detection & Bounding boxes & RGB & Source: 5{,}800\,$\times$\,3{,}504, release: 600\,$\times$\,600 & 1{,}108 images (1{,}106 annotated), 3{,}981 boxes, 5 multi-label defect types \\
+    InfraredSolarModules~\citep{InfraredSolarModulesGitHub2020, Millendorf2020InfraredSolarModules} & Classification & Image labels & Infrared & 24\,$\times$\,40 & 20{,}000 images, 12 single-label conditions, 175--10{,}000 per class \\
+    Thermal PV UAV Dataset~\citep{ThermalPVZenodo2025, Christakakis2025ThermalPV} & Object detection & Bounding boxes & Thermal IR & 640\,$\times$\,512 & 353 images (351 annotated), 26{,}678 panel boxes, 1 released box class, 6 fault types unencoded \\
+    SolarDK~\citep{SolarDKOSF2022, Khomiakov2022SolarDK} & Classification, segmentation & Image labels + pixel masks & Aerial RGB & 320\,$\times$\,320, 10--15\,cm/pixel GSD & 113{,}179 images: 23{,}417 manually labeled (PV absent/present: 22{,}537/880) plus 89{,}762 positives, 880 masks \\
+    \hline
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Metals}}} \\
+    NEU-CLS~\citep{NEUDB2026, Song2013NEUCLS} & Classification & Image labels & Grayscale & 200\,$\times$\,200 & 1{,}800 images, 6 single-label defect types, 300--300 per class \\
+    X-SDD~\citep{XSDDKaggle2026, Feng2021XSDD} & Classification, object detection & Image labels + boxes & RGB & 128\,$\times$\,128 & 1{,}360 images, 7 single-label defect types, 63--397 per class, later box count not reported \\
+    NEU-DET~\citep{NEUDB2026, He2020NEUDET} & Object detection & Bounding boxes & Grayscale & 200\,$\times$\,200 & 1{,}800 annotated images, box count not reported, 6 defect types, 300--300 per type \\
+    NEU-SEG~\citep{NEUSegGitHub2026, Dong2020PGANet} & Segmentation & Pixel masks & Grayscale & 200\,$\times$\,200 & 900 masked images, 3 defect types: 300/300/300 \\
+    GC10-DET~\citep{GC10DETGitHub2026, Lv2020GC10DET} & Object detection & Bounding boxes & Grayscale & 2{,}048\,$\times$\,1{,}000 & 2{,}300 images (2{,}292 annotated), 3{,}563 boxes, 10 multi-label defect types, 46--734 per type \\
+    Severstal Steel Defect~\citep{KaggleSeverstal2019, Bozic2021MixedSupervision} & Classification, segmentation & Image labels + pixel masks & Grayscale & 1{,}600\,$\times$\,256 & 12{,}568 images, mask-positive/negative: 6{,}666/5{,}902, 4 multi-label defect types \\
+    KolektorSDD~\citep{KolektorSDD2026, Tabernik2020KolektorSDD} & Segmentation, localization & Pixel masks & Grayscale & 1{,}408\,$\times$\,512 & 400 images, mask-positive/negative: 50/350, binary defect, 3-fold cross-validation \\
+    KolektorSDD2~\citep{KolektorSDD2Host2026, Bozic2021MixedSupervision} & Segmentation, localization & Pixel masks & RGB & Var.: approx. 230\,$\times$\,630 & 3{,}335 images, mask-positive/negative: 356/2{,}979, binary defect \\
+    Magnetic Tile Defects~\citep{MagneticTileRepo2026, Huang2020MagneticTile} & Segmentation, localization & Pixel masks & Grayscale & Var. (released ROI crops): 103--632\,$\times$\,222--403 & 1{,}344 image-mask pairs (normal/defective: 952/392), 6 single-label conditions (5 defect types plus normal), 32--952 per class \\
+    APDDD~\citep{APDDDTianchi2025, Han2025YOLOAL} & Object detection & Bounding boxes & RGB & 640\,$\times$\,640 & 3{,}719 images, 5{,}279 boxes, 10 defect types, images per type not reported \\
+    MPDD~\citep{MPDDGitHub2026, MPDDRepo2026} & Anomaly detection, localization & Image labels + pixel masks & RGB & 1{,}024\,$\times$\,1{,}024 & Train normal/test normal/test anomalous: 888/176/282, total 1{,}346 images, 6 products, anomaly masks \\
+    MPDD2~\citep{MPDD2GitHub2026, MPDD2Repo2026} & Anomaly detection & Image labels & RGB & 256\,$\times$\,256 & Train normal/test normal/test anomalous: 385/96/264, total 745 images, 4 products, image labels \\
+    CSDD~\citep{CSDDGitHub2025, Mao2025CSDD} & Object detection, segmentation & Boxes + pixel masks & RGB & 3{,}648\,$\times$\,3{,}648 & 2{,}100 images, 56{,}356 box/mask instances, 3 defect types \\
+    MSDD~\citep{MSDDScienceDB2025, Wu2025MSDD} & Object detection & Bounding boxes & Gray + pseudo-color & Source: up to 2{,}560\,$\times$\,1{,}920, release patches: 640\,$\times$\,640 & 138{,}585 single-channel plus 9{,}239 pseudo-color images, 8 defect types, pseudo-color normal/defect: 5{,}746/3{,}493 \\
+    HSS-IAD~\citep{HSSIADGitHub2025, Wang2025HSSIAD} & Anomaly detection, localization & Image labels + pixel masks & RGB & Var. (category-specific): 122--1{,}600\,$\times$\,271--1{,}024 & 12{,}075 images, 7 products, normal-only training, test-anomaly masks, splits in Supplementary Data S1 \\
+    LoHi-WELD~\citep{LoHiWELDGitHub2024, Block2024LoHiWELD} & Classification, object detection & Image labels + boxes & RGB & Low: 640\,$\times$\,480, high: 2{,}048\,$\times$\,1{,}080 & 3{,}022 images, 22{,}412 boxes, 4 multi-label defect types \\
+    BSData~\citep{BSDataKITopen2021, Schlagenhauf2021BSData} & segmentation & Polygon segmentation masks + sequence metadata & RGB & Var.: 1{,}130--2{,}928\,$\times$\,460--1{,}016 & 1{,}104 images (type 1/2: 69/1{,}035), 394 polygon-masked images (train/test: 324/70), 485 pitting instances, 1 defect type, 27 wear sequences \\
+    \hline
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Textiles}}} \\
+    AITEX~\citep{AITEXHost2026, SilvestreBlanes2019AFID} & Classification, segmentation & Image labels + pixel masks & Grayscale & 4{,}096\,$\times$\,256 & 245 images (normal/defective: 140/105), 105 masks, 12 defect types \\
+    TILDA~\citep{TILDA2026, SchulzMirbach1996TILDA} & Classification, localization & Image labels + defect-location metadata & Grayscale & 768\,$\times$\,512 & 3{,}200 images, 8 single-label inspection conditions, 400--400 per class \\
+    ZJU-Leaper~\citep{ZJULeaperHost2026, Zhang2021ZJULeaper} & Object detection, segmentation & Image labels + boxes + pixel masks & RGB & 512\,$\times$\,512 & 94{,}833 images (normal/defective: 71{,}127/23{,}706), train/test: 63{,}184/31{,}649, 19 pattern classes, 2{,}358--7{,}244 per pattern \\
+    Lusitano~\citep{LusitanoHost2024, Carrilho2024Lusitano} & Anomaly detection & Image labels & RGB line-scan & 4{,}096\,$\times$\,1{,}024 & Train normal/test normal/test anomalous: 32{,}000/1{,}038/1{,}646, total 34{,}684 images, 1 product \\
+    FabricSpotDefect~\citep{FabricSpotMendeley2024, Islam2024FabricSpotDefect} & Object detection, segmentation & Bounding boxes + partial polygon masks & RGB & Var. (40 sizes): 651--4{,}032\,$\times$\,630--4{,}624 & 1{,}014 original images (978 annotated), 3{,}288 boxes, 200 polygons on 117 images, 1 annotated defect type (spot) \\
+    Batavia/Sarga Woven Fabric~\citep{BataviaSargaHost2025, GilArroyo2025TextileDataset} & Classification & Patch labels & Grayscale & Source: 2{,}048\,$\times$\,696, release patches: 365\,$\times$\,365 & 4{,}303 source images, 47{,}269 patches, binary patch labels (case/control: 8{,}955/38{,}314) \\
+    DME Fabric Defect Detection~\citep{DMEFabricDefect2026, Akram2025AIDrivenFabricClassification} & Classification & Image labels & RGB microscopy & 1{,}920\,$\times$\,1{,}080 & 97 images, 5 single-label conditions (stain/damage/broken thread/holes/non-defective: 20/20/20/20/17) \\
+    FD\_Dataset~\citep{Neamah2024FabricDefects, Sujitha2026TextureConditionedGAN} & Classification, object detection, segmentation & Object labels & RGB & Raw var.: 358--1{,}280\,$\times$\,299--1{,}280, prepared release: 640\,$\times$\,640 & 720 prepared images, 781 boxes, 4 multi-label defect types \\
+    \hline
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Glass}}} \\
+    AGDD~\citep{AGDDRepo2024, Li2024AGDDDualModal} & Object detection & Oriented + axis-aligned boxes & Dual illumination & Source pairs: 1{,}280\,$\times$\,720, prepared release: 640\,$\times$\,640 & 219 source pairs, 1{,}752 released pairs, 4{,}784 augmented boxes, 4 multi-label defect types \\
+    Glass Bangle Defect Detection Classification~\citep{GlassBangleKaggle2023, Dubey2023Bangle} & Classification & Image labels & RGB & 3{,}000\,$\times$\,3{,}000 & 1{,}080 images, 3 single-label conditions (good/broken/defect: 520/316/244) \\
+    MSD~\citep{MSDGitHub2022, Zhang2022FDSNet} & Segmentation & Pixel masks & RGB & 1{,}920\,$\times$\,1{,}080 & 1{,}200 masked images, 3 single-label defect types: 400/400/400 \\
+    MVEP~\citep{MVEPDataset2026, Bernardi2026CompactMambaMVEP} & Classification, object detection & Boxes + ordinal labels & Multi-view RGB & 1{,}008\,$\times$\,1{,}008 & 16{,}000 multi-view images, ordinal severity labels \\
+    SSGD~\citep{SSGDGitHub2023, Han2023SSGD} & Object detection & Bounding boxes & Line-scan RGB & 1{,}500\,$\times$\,1{,}000 & 2{,}504 images, 3{,}914 boxes, 7 defect types plus normal, multi-label \\
+    \hline
+    
+    %\noalign{\pagebreak}
+    \multicolumn{6}{@{}l}{\textit{\textbf{Automotive}}} \\
+    CarDD~\citep{CarDDProject2026, Wang2023CarDD} & Classification, object detection & Image labels + boxes + polygon masks & RGB & Var.: high-resolution, minimum 1{,}000\,$\times$\,413 & 4{,}000 images, 8{,}740 instances, 6 multi-label damage types \\
+    AutoVI~\citep{AutoVIZenodo2024, Carvalho2024AutoVI} & Anomaly detection, localization & Image labels + pixel masks & RGB & Var. (category-specific): 400\,$\times$\,400 or 1{,}000\,$\times$\,750 & Train normal/test normal/test anomalous: 1{,}530/1{,}533/887, total 3{,}950 images, 6 products, anomaly masks \\
+    Structural Adhesive Defects Dataset~\citep{GANSynthAdhesiveGitHub2021, Peres2021GANAdhesive} & Object detection & Bounding boxes & RGB & 1{,}024\,$\times$\,1{,}024 & Generator source: 143 real images, detector train/validation/test: 594/58/18, 2 multi-label defect types, instances not reported \\
+    Open Stamped Parts Dataset~\citep{OpenStampedPartsHost2024, Antiles2024OSPD} & Object detection, segmentation & Boxes + synthetic masks & Grayscale & 1{,}456\,$\times$\,1{,}088 & 9{,}660 real images (1{,}680 annotated), 11{,}240 synthetic images, 7 multi-label hole categories \\
+    \hline
+    
+    \multicolumn{6}{@{}l}{\textit{\textbf{Multi-industry benchmarks}}} \\
+    MVTec AD~\citep{MVTecADHost2026, Bergmann2021MVTecAD} & Anomaly detection, localization & Image labels + pixel masks & RGB & Var. (category-specific): 700--1{,}024\,$\times$\,700--1{,}024 & Train normal/test normal/test anomalous: 3{,}629/467/1{,}258, total 5{,}354 images, 15 products, anomaly masks \\
+    VisA~\citep{VisAHost2022, Zou2022VisA} & Anomaly detection, segmentation & Image labels + pixel masks & RGB & Source: 6{,}000\,$\times$\,4{,}000, release crops: var. & 10{,}821 images (normal/anomalous: 9{,}621/1{,}200), 12 products, anomaly masks \\
+    BTAD~\citep{BTADHost2026, Zhang2024RealNet, Yang2024DefectSpectrum} & Anomaly detection, localization & Image labels + pixel masks & RGB & Var. (product-specific): 600--1{,}600\,$\times$\,600--1{,}600 & Train normal/test normal/test anomalous: 1{,}799/451/290, total 2{,}540 images, 3 products, 290 masks \\
+    MVTec LOCO AD~\citep{MVTecLOCOHost2026, Bergmann2022MVTecLOCO} & Anomaly detection, localization & Image labels + pixel masks & RGB & Var. (category-specific): 800--1{,}700\,$\times$\,1{,}000--1{,}600 & Train normal/validation normal/test normal/test anomalous: 1{,}772/304/575/993, total 3{,}644 images, 5 products \\
+    MVTec AD 2~\citep{MVTecAD2Host2026, HecklerKram2025MVTecAD2} & Anomaly detection, localization & Image labels + public/server masks & RGB/gray & Var. (category-specific): 1{,}400--4{,}224\,$\times$\,1{,}024--2{,}048 & Train/validation/test: 2{,}528/302/5{,}174, total 8{,}004 images, 8 products, some test masks server-held \\
+    Real-IAD~\citep{RealIADProject2024, Wang2024RealIAD} & Anomaly detection, segmentation & Image labels + pixel masks & Multi-view RGB & Source: 3{,}648\,$\times$\,5{,}472, release downsample: 1{,}024\,$\times$\,1{,}024 & 151{,}050 images (normal/anomalous: 99{,}721/51{,}329), 30 products, normal-only protocol, anomaly masks \\
+    Industrial-5i~\citep{Industrial5iScienceDB2022, Shi2023FewShotIndustrial5i} & Segmentation & Pixel masks & Grayscale + RGB & Var. (released images): 103--1{,}464\,$\times$\,222--1{,}016 & 17{,}181 images (normal/anomalous: 12{,}768/4{,}413), 4{,}413 anomaly masks, 20 products from 6 source datasets, 102--6{,}670 images per product \\
+    Bosch SDI~\citep{BoschSDIHost2026, Wang2022DTGAN} & Classification & Image labels & Grayscale + RGB & Var. (product-group-specific): A: 423\,$\times$\,423, B: 256\,$\times$\,256 or 301\,$\times$\,301, C: 680\,$\times$\,680 & 18{,}807 images, 3 product groups (A/B/C: 6{,}632/7{,}036/5{,}139), 3 single-label conditions (normal/scratch/spot: 17{,}143/628/1{,}036) \\
+    Bottle-Cap Dataset~\citep{BottleCapHost2026, Fan2024FEGAN} & Classification, anomaly detection & Image labels & RGB & 1{,}280\,$\times$\,960 & 978 images (normal/defective: 710/268), 2 single-label conditions \\
+    DAGM2007~\citep{DAGM2007Zenodo2023, Yang2024DefectSpectrum} & Classification, localization & Image labels + ellipse masks & Grayscale & 512\,$\times$\,512 & 16{,}100 images, 10 texture categories, binary normal/defect labels, 1{,}150--2{,}300 per category \\
+    Defect Spectrum~\citep{DefectSpectrumHost2024, Yang2024DefectSpectrum} & Classification, segmentation & Pixel masks + multi-label defect labels + captions & Grayscale + RGB & Real var.: 512--3{,}840\,$\times$\,480--2{,}748, synthetic: 256\,$\times$\,256 & 2{,}711 released real images (DS-MVTec/DS-VISION/DS-DAGM/DS-Cotton-Fabric: 1{,}638/717/270/86), 2{,}299 real masks, 1{,}920 synthetic image-mask pairs (MVTec/VISION/Cotton-Fabric: 1{,}440/384/96), 98 documented semantic defect labels \\
+\end{longtable}
+
+\endgroup

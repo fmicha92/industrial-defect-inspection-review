@@ -1,0 +1,11 @@
+# Repository licensing
+
+This repository is distributed under a multi-license model:
+
+- Source code, command-line scripts, tests, and project-specific Agent Skills are licensed under the MIT License. See `docs/licenses/MIT.txt`.
+- Original documentation, schemas, generated exports, and original knowledge-graph annotations are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). See `docs/licenses/CC-BY-4.0.md`.
+- Vendored Agent Skills and other third-party components retain their own licenses and attribution requirements. See `THIRD_PARTY_NOTICES.md` and the metadata in each component.
+- Quotations, abstracts, bibliographic metadata, and other material derived from source publications remain subject to the rights of their original authors and publishers and are not relicensed by this notice.
+- External datasets and dataset archives are not distributed by this repository and are not covered by either repository license.
+
+Where a file contains an explicit license notice, that notice takes precedence for that file.

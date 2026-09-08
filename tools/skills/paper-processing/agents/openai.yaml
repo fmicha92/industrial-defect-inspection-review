@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Processing"
+  short_description: "Build evidence-rich Obsidian paper notes"
+  default_prompt: "Use $paper-processing to extract this source into a complete, graph-linked paper note."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "verified_on": "2026-08-28",
+  "sources": [
+    {
+      "id": "scientific-agent-skills",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "license": "MIT",
+      "imported_revision": "not recorded in source workspace",
+      "skills": [
+        "scholar-evaluation",
+        "scientific-brainstorming",
+        "scientific-critical-thinking",
+        "scientific-schematics",
+        "scientific-slides",
+        "scientific-visualization",
+        "scientific-writing"
+      ]
+    },
+    {
+      "id": "ai-skill-scholar",
+      "repository": "https://github.com/dsebastien/ai-skill-scholar",
+      "license": "MIT",
+      "imported_revision": "not recorded in source workspace",
+      "skills": [
+        "literature-review",
+        "scholar-citations",
+        "scholar-search"
+      ]
+    }
+  ]
+}

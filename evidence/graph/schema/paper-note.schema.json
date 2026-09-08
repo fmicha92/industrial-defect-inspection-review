@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/paper-note.schema.json",
+  "title": "Paper evidence note",
+  "allOf": [{"$ref": "note.schema.json"}],
+  "type": "object",
+  "required": ["title", "paper_key", "paper_type", "year", "status"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "paper_key": {"type": "string", "minLength": 1},
+    "paper_type": {
+      "enum": ["research", "review", "dataset", "benchmark", "systems", "system", "other"]
+    },
+    "year": {"oneOf": [{"type": "integer"}, {"type": "string"}]},
+    "venue": {"type": "string"},
+    "authors": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string"},
+    "datasets": {"type": "array", "items": {"type": "string"}},
+    "methods": {"type": "array", "items": {"type": "string"}},
+    "tasks": {"type": "array", "items": {"type": "string"}},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "metrics": {"type": "array", "items": {"type": "string"}},
+    "doi": {"type": "string"},
+    "arxiv": {"type": "string"},
+    "url": {"type": "string"}
+  },
+  "additionalProperties": true
+}
+

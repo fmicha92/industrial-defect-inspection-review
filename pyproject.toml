@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inspection-evidence-toolkit"
+version = "0.1.0"
+description = "Export and validate a manufacturing visual-inspection evidence graph"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Repository contributors"}]
+keywords = ["manufacturing", "visual inspection", "datasets", "synthetic data", "knowledge graph"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[project.scripts]
+inspection-evidence = "inspection_evidence.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "tools/src"}
+
+[tool.setuptools.packages.find]
+where = ["tools/src"]

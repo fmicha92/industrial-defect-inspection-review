@@ -1,0 +1,40 @@
+long_table_row,study,dataset,task,annotation,synthesis_family,metric,metric_baseline,metric_new,normalized_change
+1,"Tsai2025G2LGAN","WM-811K","Classification","Image-level","GAN-based","Accuracy",89.23,98.39,0.8505
+2,"Bao2024AutoencoderWDM","WM-811K","Classification","Image-level","Hybrid","validation accuracy",85,98,0.8667
+3,"Yu2021MGGAN","WM-811K","Classification","Image-level","GAN-based","accuracy",88.02,93.43,0.4516
+4,"AbuEbayyeh2022WaferCaps","WM-811K","Classification","Image-level","GAN-based","test accuracy",78.20,91.41,0.6060
+5,"Ji2020WaferGAN","WM-811K","Classification","Image-level","GAN-based","accuracy",97.00,98.30,0.4333
+6,"Li2025JRGAN","WM-811K (MIR-WM811K variant)","Classification","Image-level","GAN-based","accuracy",95.14,97.24,0.4321
+7,"Li2025JRGAN","MixedWM38","Classification","Image-level","GAN-based","accuracy",94.19,97.38,0.5491
+8,"Wang2023cTransGAN","DeepPCB","Object detection","Bounding boxes","Hybrid GAN-based","Faster R-CNN ResNet101 mAP",97.7,98.8,0.4783
+9,"AlWaisy2022DeepFeatureELPV","ELPV Solar Cell Dataset (0%/100% subset)","Classification","Image-level","Rule-based / hybrid","binary accuracy",60.00,98.15,0.9538
+10,"Wang2022PVDefectDetection","ELPV Solar Cell Dataset","Classification","Image-level","Rule-based / hybrid","accuracy",94.14,96.17,0.3464
+11,"Demirci2024HybridSolarGAN","ELPV Solar Cell Dataset","Classification","Image-level","GAN-based / hybrid","accuracy",93.25,94.11,0.1274
+12,"Ebied2025AdvancedELPVGAN","ELPV Solar Cell Dataset","Classification","Image-level","GAN-based / hybrid","best tuned class recall mean",0.8903,0.9013,0.1003
+13,"Su2021SIGAN","EL-2019 (SIGAN dataset)","Segmentation, classification","Image-level + segmentation evaluation","GAN-based","segmentation total F-score vs SEF",69.08,90.34,0.6876
+14,"Chen2024NHDYOLO","NEU-DET","Detection","Bounding boxes","Rule-based / hybrid","small-object AP",26.90,31.30,0.0602
+15,"Liu2023DualDiscriminator","NEU-CLS","Detection","Image-level (converted for detection)","GAN-based","mAP@0.5",82.26,97.59,0.8641
+16,"Wang2025YOLOv11Edge","NEU-DET (selected three classes)","Detection","Image-level (converted for detection)","GAN-based / hybrid","mAP@0.5",81.4,85.1,0.1989
+17,"Wang2023ALADA","GC10-DET","Detection","Bounding boxes","Rule-based / hybrid","mAP",63.75,67.91,0.1148
+18,"Liu2023UnveilingPatterns","NEU-CLS","Classification","Image-level","GAN-based / semi-supervised","accuracy at 100% labeled data with k=3",92.87,96.35,0.4881
+19,"Hong2024DDIMSteel","NEU-DET","Detection","Bounding boxes","Diffusion-based","YOLOv8n mAP@0.5",0.748,0.803,0.2183
+20,"Zhu2025CrossScaleDiffusion","NEU-CLS","Classification","Image-level","Diffusion-based","ResNet-18 accuracy",93.24,99.89,0.9837
+21,"Leinena2024LatentDiffusionSteel","NEU-SEG","Segmentation","Pixel masks","Diffusion-based / hybrid","DeepLabV3+ mIoU",71.31,76.20,0.1704
+22,"Dushenev2026FewShotDiffusion","Magnetic Tile Defects","Classification","Image-level","Diffusion-based / hybrid","positive-class F1",0.051,0.296,0.2582
+23,"Lin2024GTCutMix","X-SDD","Detection","Bounding boxes","Rule-based / hybrid","Faster R-CNN mAP",68.52,74.39,0.1865
+24,"Mohammed2024FabricCGAN","AITEX (selected three defect types)","Segmentation","Segmentation masks","GAN-based","U-Net F1",0.2678,0.9699,0.9589
+25,"Lu2022DefectTransfer","ZJU-Leaper","Classification","Image-level + boxes + masks","GAN-based / hybrid","accuracy",74.91,84.78,0.3934
+26,"Dai2025BlindSuperResolutionFabric","DAGM2007","Detection","Weak localization","Rule-based / hybrid","mAP@0.5",0.961,0.986,0.6410
+27,"Boroujeni2025GlassDiffusion","MVTec AD (bottle subset)","Classification","Image-level","Diffusion-based","ResNet50V2 accuracy",0.78,0.93,0.6818
+28,"Liu2026GiPL","CarDD","Object detection","Bounding boxes","Learned generative / hybrid","1-shot mAP@0.50",34.2,39.7,0.0836
+29,"Li2021CutPaste","MVTec AD","AD, localization","Pixel-level","Rule-based","image-level AUROC",85.0,95.2,0.6800
+30,"Bozorgtabar2023AttentionConditioned","MVTec AD","AD, localization","Pixel-level","Rule-based / hybrid","image-level AUROC",95.4,98.3,0.6304
+31,"Lin2024ComprehensiveAugmentation","MVTec AD","AD, localization","Pixel-level","Rule-based / hybrid","localization AUROC",94.8,98.0,0.6154
+32,"Peng2024DefectMapPrediction","MVTec AD","AD, localization","Pixel-level","Rule-based / hybrid","ablation AUROC",98.00,99.70,0.8500
+33,"Pei2023SimulatingAnomalousSamples","MVTec AD","AD, localization","Pixel-level","Rule-based / hybrid","MVTec AD average ROC-AUC",96.10,97.61,0.3872
+34,"Ding2024PatchWiseAugmentation","MVTec AD; BTAD","AD, localization","Pixel-level","Rule-based / hybrid","BTAD image-level AUROC",94.4,95.5,0.1964
+35,"Li2025SACD","MVTec AD; BTAD","AD, localization","Pixel-level","Rule-based / hybrid","MVTec AD image AUROC",99.1,99.3,0.2222
+36,"Hoang2025MultimodalFusion","MVTec AD; VisA","AD, localization","Pixel-level","Rule-based / hybrid","MVTec AD pixel AUROC",98.6,99.0,0.2857
+37,"Shah2025DiversePseudoAnomalyInsertion","MVTec AD; VisA; KolektorSDD2","AD, segmentation","Pixel-level","Rule-based / hybrid","MVTec AD APpixel",60.3,65.5,0.1310
+38,"Dai2025SeaS","MVTec AD","Segmentation, AD","Pixel-level","Diffusion-based / hybrid","Average IoU",46.49,57.66,0.2087
+39,"Dai2025SeaS","VisA","Segmentation, AD","Pixel-level","Diffusion-based / hybrid","Average IoU",17.69,29.40,0.1423

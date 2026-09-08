@@ -1,0 +1,7 @@
+interface:
+  display_name: "PRISMA Workflow"
+  short_description: "Track screening and eligibility decisions"
+  default_prompt: "Use $prisma-workflow to create an auditable screening session for this review."
+policy:
+  allow_implicit_invocation: true
+

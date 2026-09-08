@@ -1,0 +1,10 @@
+.git
+.github
+.conda
+.venv
+workspace
+website/node_modules
+website/dist
+evidence/graph/vault/.obsidian/workspace.json
+__pycache__
+*.pyc

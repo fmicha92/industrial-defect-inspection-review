@@ -1,0 +1,25 @@
+/* Interaction semantics; the original presentation is defined in styles.css. */
+[hidden] {
+  display: none !important;
+}
+.matrix-wrap,
+.compare-check,
+.registry-table-wrap {
+  position: relative;
+}
+button.matrix-cell,
+button.count-mark {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+button.count-mark {
+  font: inherit;
+}
+.scatter-dot[role="button"] {
+  cursor: pointer;
+}
+.provenance-grid > .source-manifest:only-child {
+  grid-column: 1 / -1;
+}

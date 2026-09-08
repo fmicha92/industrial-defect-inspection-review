@@ -1,0 +1,26 @@
+name: Validate repository
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install package
+        run: python -m pip install --no-deps -e .
+      - name: Validate repository
+        run: inspection-evidence validate
+      - name: Check generated exports
+        run: inspection-evidence export --check
+      - name: Run tests
+        run: python -m unittest discover -s tools/tests -v

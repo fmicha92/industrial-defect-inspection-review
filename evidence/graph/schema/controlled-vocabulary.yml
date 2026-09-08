@@ -1,0 +1,36 @@
+schema_version: "1.0.0"
+availability:
+  - "public"
+  - "private"
+  - "unspecified"
+  - "not reported"
+paper_types:
+  - "research"
+  - "review"
+  - "dataset"
+  - "benchmark"
+  - "systems"
+  - "other"
+synthesis_families:
+  - "rule-based insertion"
+  - "procedural synthesis"
+  - "simulation"
+  - "GAN-based generation"
+  - "diffusion-based generation"
+  - "other generative synthesis"
+  - "hybrid synthesis"
+downstream_tasks:
+  - "classification"
+  - "object detection"
+  - "semantic segmentation"
+  - "instance segmentation"
+  - "anomaly detection"
+  - "anomaly localization"
+  - "related inspection pipeline"
+screening_decisions:
+  - "include"
+  - "exclude"
+  - "unclear"
+  - "duplicate"
+missing_value: "not reported"
+

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/dataset-note.schema.json",
+  "title": "Dataset evidence note",
+  "allOf": [{"$ref": "note.schema.json"}],
+  "type": "object",
+  "required": ["title", "url"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "related_domain": {"type": "string"},
+    "introduced_by": {"type": "string"},
+    "related_papers": {"type": "array", "items": {"type": "string"}},
+    "availability": {"enum": ["public", "private", "unspecified", "not reported"]},
+    "access": {"type": "string"},
+    "license": {"type": "string"},
+    "licenses": {"type": "array", "items": {"type": "string"}},
+    "url": {"type": "string", "minLength": 1},
+    "data_sources": {
+      "oneOf": [
+        {"type": "string"},
+        {"type": "array", "items": {"type": "string"}}
+      ]
+    }
+  },
+  "additionalProperties": true
+}
+

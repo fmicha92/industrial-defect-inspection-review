@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Environments and secrets
+.conda/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+token*.json
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*~
+
+# Obsidian per-user state
+evidence/graph/vault/.obsidian/workspace.json
+evidence/graph/vault/.obsidian/workspace-mobile.json
+evidence/graph/vault/.trash/
+
+# Local literature and dataset workspaces (never publish source PDFs/data)
+workspace/
+paper-inbox/
+downloads/
+!website/public/downloads/
+!website/public/downloads/**
+raw_data/
+private_data/
+workspace/unlicensed-agent-skills/
+
+# Generated caches and build products
+.cache/
+.codex_voice/
+evidence/review/publication/manuscript/*.aux
+evidence/review/publication/manuscript/*.bbl
+evidence/review/publication/manuscript/*.bcf
+evidence/review/publication/manuscript/*.blg
+evidence/review/publication/manuscript/*.fdb_latexmk
+evidence/review/publication/manuscript/*.fls
+evidence/review/publication/manuscript/*.log
+evidence/review/publication/manuscript/*.out
+evidence/review/publication/manuscript/*.run.xml
+evidence/review/publication/manuscript/*.synctex.gz
+evidence/review/publication/manuscript/*.toc
