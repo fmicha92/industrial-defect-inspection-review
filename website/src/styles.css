@@ -782,7 +782,7 @@ select {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.72fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(2.5rem, 5.5vw, 5.5rem);
   align-items: center;
   align-content: center;
   padding: clamp(2rem, 3.5vw, 3.25rem) clamp(1rem, 5vw, 5rem);
@@ -820,11 +820,14 @@ select {
 
 .hero-copy,
 .hero-aside {
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
 
 .hero-copy .eyebrow {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
   color: #70d5c8;
 }
 
@@ -832,7 +835,8 @@ select {
   max-width: 920px;
   color: white;
   font-size: clamp(3rem, 5.2vw, 5.75rem);
-  line-height: 0.9;
+  line-height: 1.04;
+  overflow-wrap: anywhere;
   letter-spacing: -0.065em;
 }
 
@@ -845,7 +849,8 @@ select {
 
 .hero-copy .lede {
   max-width: 690px;
-  margin-top: 1.1rem;
+  margin-top: 1.5rem;
+  line-height: 1.7;
   color: #c3d6d8;
   font-size: clamp(0.98rem, 1.25vw, 1.12rem);
 }
@@ -854,8 +859,8 @@ select {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;
-  margin-top: 1.35rem;
+  gap: 1rem 1.75rem;
+  margin-top: 1.75rem;
 }
 
 .primary-action,
@@ -895,7 +900,7 @@ select {
 }
 
 .hero-aside {
-  padding: 1.05rem 1.35rem;
+  padding: 1.4rem 1.6rem;
   border-top: 3px solid var(--teal);
   background: rgba(9, 35, 44, 0.68);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.2);
@@ -904,12 +909,13 @@ select {
 
 .hero-publication {
   max-width: 690px;
-  margin-top: 1.35rem;
-  padding-top: 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hero-publication .kicker {
+  margin-bottom: 0.75rem;
   color: #70d5c8;
 }
 
@@ -918,13 +924,13 @@ select {
   color: white;
   font-size: 1.0625rem;
   font-weight: 650;
-  line-height: 1.45;
+  line-height: 1.6;
   letter-spacing: 0;
   text-wrap: pretty;
 }
 
 .hero-publication .article-authors {
-  margin: 0.5rem 0 0;
+  margin: 0.85rem 0 0;
   color: #c3d6d8;
   font-size: 0.875rem;
   line-height: 1.6;
@@ -932,15 +938,15 @@ select {
 
 .hero-aside .kicker {
   color: #79d7cc;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-metric {
   display: grid;
-  grid-template-columns: 78px 1fr;
+  grid-template-columns: minmax(5rem, max-content) minmax(0, 1fr);
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.62rem 0;
+  gap: 1.15rem;
+  padding: 0.95rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
@@ -951,14 +957,18 @@ select {
 }
 
 .hero-metric > span {
+  min-width: 0;
   display: grid;
-  gap: 0.23rem;
+  gap: 0.4rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
   color: white;
   font-size: 0.88rem;
   font-weight: 750;
 }
 
 .hero-metric small {
+  line-height: 1.55;
   color: #aac2c5;
   font-size: 0.72rem;
   font-weight: 500;
@@ -966,11 +976,11 @@ select {
 
 .scope-warning {
   display: flex;
-  gap: 0.55rem;
-  margin: 0.7rem 0 0;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
   color: #b8ccce;
   font-size: 0.72rem;
-  line-height: 1.45;
+  line-height: 1.65;
 }
 
 .scope-warning svg {
@@ -980,16 +990,17 @@ select {
 
 .principle-band {
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(8rem, 9rem) minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1.4rem;
-  padding: 0.85rem clamp(1.4rem, 5vw, 5rem);
+  gap: 1rem 2rem;
+  padding: 1.15rem clamp(1.4rem, 5vw, 5rem);
   margin-bottom: 2.4rem;
   color: var(--ink);
   background: var(--saffron);
 }
 
 .principle-band > span {
+  line-height: 1.6;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.66rem;
@@ -1007,14 +1018,15 @@ select {
   margin: 0;
   max-width: 930px;
   font:
-    500 clamp(1rem, 1.5vw, 1.22rem) / 1.3 Georgia,
+    500 clamp(1rem, 1.5vw, 1.22rem) / 1.5 Georgia,
     serif;
 }
 
 .principle-band a {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.65rem;
+  line-height: 1.5;
   font-size: 0.8rem;
   font-weight: 800;
   text-decoration: none;
@@ -2854,6 +2866,13 @@ select {
   }
 }
 
+@media (max-width: 960px) {
+  .opening-screen .hero-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --site-header-height: 68px;
@@ -2881,8 +2900,8 @@ select {
   }
   .hero-section {
     grid-template-columns: 1fr;
-    gap: 1.35rem;
-    padding: 2.25rem 1.2rem 1.4rem;
+    gap: 2.25rem;
+    padding: 2.25rem 1.2rem 1.75rem;
   }
   .hero-copy h1 {
     font-size: clamp(2.75rem, 13vw, 4rem);
@@ -2892,45 +2911,45 @@ select {
   }
   .hero-aside {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     margin-top: 0;
-    padding: 0.9rem 1rem;
+    padding: 1.2rem 1.25rem;
   }
   .hero-aside .kicker {
     grid-column: 1 / -1;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.6rem;
   }
   .hero-metric {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(4rem, max-content) minmax(0, 1fr);
     align-content: start;
-    gap: 0.12rem;
-    padding: 0.55rem 0.45rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.14);
-    border-bottom: 0;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   }
   .hero-metric:last-of-type {
-    border-right: 0;
+    border-bottom: 0;
   }
   .hero-metric > strong {
     font-size: 1.75rem;
   }
   .hero-metric > span {
-    font-size: 0.72rem;
-    line-height: 1.25;
+    font-size: 0.88rem;
+    line-height: 1.5;
   }
   .hero-metric small {
-    font-size: 0.62rem;
+    font-size: 0.75rem;
   }
   .scope-warning {
     grid-column: 1 / -1;
-    margin-top: 0.3rem;
-    padding-top: 0.65rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
   .principle-band {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
-    padding: 0.95rem 1.2rem;
+    gap: 1rem;
+    padding: 1.15rem 1.2rem;
     margin-bottom: 2.25rem;
   }
   .principle-band a {

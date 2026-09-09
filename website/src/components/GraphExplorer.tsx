@@ -523,7 +523,7 @@ function CanvasController({
   }, [sigma]);
   useEffect(() => {
     const graph = sigma.getGraph();
-    graph.forEachNode((id) => graph.mergeNodeAttributes(id, positionForNode(id)));
+    graph.forEachNode((id: string) => graph.mergeNodeAttributes(id, positionForNode(id)));
     sigma.refresh();
   }, [sigma]);
   const active = hovered ?? selected;
